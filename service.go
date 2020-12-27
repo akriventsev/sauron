@@ -27,6 +27,8 @@ func (s *Service) updateStackedBallance() {
 		fmt.Println(err)
 		return
 	}
+	defer resp.Body.Close()
+
 	buf := new(bytes.Buffer)
 	buf.ReadFrom(resp.Body)
 	bodyStr := buf.String()
@@ -38,7 +40,6 @@ func (s *Service) updateStackedBallance() {
 		return
 	}
 	s.StackedUSDNBallance = n
-	defer resp.Body.Close()
 }
 
 func (s *Service) updateEthereumBallance() {
@@ -50,6 +51,8 @@ func (s *Service) updateEthereumBallance() {
 		fmt.Println(err)
 		return
 	}
+	defer resp.Body.Close()
+
 	buf := new(bytes.Buffer)
 	buf.ReadFrom(resp.Body)
 	bodyStr := buf.String()
@@ -63,8 +66,6 @@ func (s *Service) updateEthereumBallance() {
 	}
 
 	s.EthereumUSDNBallance = n.Div(n, big.NewInt(1000000000000)) // div by 1000000000000 convert to paulis
-
-	defer resp.Body.Close()
 }
 
 func (s *Service) Check() {
