@@ -1,0 +1,20 @@
+common:
+  contract: 0x59513055145cB8412018E0aBD85f4BB6a19074c9
+  oracle: 0x1e04E83652bBF8560F94d55c91536ed1Fc5f66a0
+  job: 54dc0b4e270b4ab5b98c0956b925a682
+wallet:
+  private_key: ffaa28199088339c3cad2dda096cf839605d5a5b311105b032b646748d8d0451
+resources:
+  waves:
+    stacking: 3PNikM6yp4NqcSU8guxQtmR5onr2D4e8yTJ
+    gateway: 3P7RhLuvncw74sinqGa7SvZYgejXxs5gVyk
+    ballance_key: rpd_balance_DG2xFkPdDwKUoBkzGAhQtLpSGzfXLiCYPEzeKH2Ad24p
+  ethereum:
+    contract: 0x674C6Ad92Fd080e4004b2312b45f796a192D27a0
+    apikey: B4RE54AMA6CR3I7MX65R12KR8VFKRKIE9S
+check:
+  critical_diference_percent: 0.02
+  check_interval: 10s
+  contract_check_interval: 6h
+server:
+  port: 1323

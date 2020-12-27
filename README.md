@@ -1,1 +1,2 @@
-# sauron
+B4RE54AMA6CR3I7MX65R12KR8VFKRKIE9S
+https://api.etherscan.io/api?module=stats&action=tokensupply&contractaddress=0x674C6Ad92Fd080e4004b2312b45f796a192D27a0&apikey=B4RE54AMA6CR3I7MX65R12KR8VFKRKIE9S
