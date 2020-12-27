@@ -149,8 +149,8 @@ func init() {
 	Auth.GasPrice = gasPrice
 
 	ContractAddress = common.HexToAddress(viper.GetString("common.contract"))
-	OracleAddress = common.HexToAddress("0x1e04E83652bBF8560F94d55c91536ed1Fc5f66a0")
-	JobID = "54dc0b4e270b4ab5b98c0956b925a682"
+	OracleAddress = common.HexToAddress(viper.GetString("common.oracle"))
+	JobID = viper.GetString("common.job")
 
 	EthereumInstance, err = NewMain(ContractAddress, EthClient)
 	if err != nil {
