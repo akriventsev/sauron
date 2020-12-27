@@ -55,13 +55,26 @@ func main() {
 				forever <- struct{}{}
 				return
 			default:
+				txn, err := EthereumInstance.RequestEthereumUSDNBallance(Auth, OracleAddress, JobID)
+				if err != nil {
+					log.Println(err)
+				} else {
+					log.Println(txn.Hash().Hex())
+				}
+				txn, err = EthereumInstance.RequestStackedUSDNBallance(Auth, OracleAddress, JobID)
+				if err != nil {
+					log.Println(err)
+				} else {
+					log.Println(txn.Hash().Hex())
+				}
+
 				EthUSDNBallance, err := EthereumInstance.EthUSDNBallance(&bind.CallOpts{})
 				if err != nil {
-					log.Fatal(err)
+					log.Println(err)
 				}
 				StackedUSDNBallance, err := EthereumInstance.StackedUSDNBallance(&bind.CallOpts{})
 				if err != nil {
-					log.Fatal(err)
+					log.Println(err)
 				}
 				Checker.StackedUSDNBallance = StackedUSDNBallance
 				Checker.EthereumUSDNBallance = EthUSDNBallance
