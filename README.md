@@ -11,3 +11,4 @@ Tracking information in the Ethereum blockchain is implemented as a smart contra
 * Every 6 hours checking the difference between balances and sending notifications
 * Registering the difference if the discrepancy between balances exceeds the conditional threshold of 2%.
 
+![Workflow](PoR-workflow.png?raw=true "Title")
